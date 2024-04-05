@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,15 +12,14 @@
   <body>
     <header id="header">
       <div class="hero-video">
-        <video
-          autoplay
-          muted
-          playsinline
-          loop
-          src="image/HpBackgroundMovie.webm"
-        ></video>
+        <video autoplay muted playsinline loop src="image/HpBackgroundMovie.webm"></video>
+      </div>
+      <h1 class="fadein">点群データの「VR観光」</h1>
+      <div id="js-scroll-top" class="scroll-top is-hide">
+        Top
       </div>
       <nav>
+        <a href="index.html"><img src="image/logo.png" alt="company-logo" id="logo"></a>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="HTML/concept.html">Concept</a></li>
@@ -29,7 +29,88 @@
         </ul>
       </nav>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+
+      <div class="greeting">
+        <h2 class="main-title">私たちについて</h2>
+        <div class="about">
+          <div class="about-content">
+            <h3>わたしたちGoodDot株式会社です。</h3>
+            <p>皆様、当サイトへようこそ。私たちは、皆様が日々の生活に役立つ情報やヒントを提供することを目指しています。<br>
+              ここでは、最新のニュース、便利なライフハック、深い知識に基づいた記事を幅広く取り揃えております。<br>
+              皆様が新しい発見をし、日常生活で役立つ知識を得られるよう、心を込めて情報をお届けします。<br>
+              どうぞごゆっくりと、当サイトをお楽しみください。<br>
+              何かご不明な点がございましたら、遠慮なくお問い合わせください。</p>
+          </div>
+          <div class="about-image">
+            <img src="image/president.jpg" alt="社長">
+            <img src="image/president.jpg" alt="社長">
+          </div>
+        </div>
+      </div>
+
+      <h2 class="main-title">
+        点群とVRによる観光の体験を
+      </h2>
+
+      <div class="youtube-contents">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xDg12d_kEuQ?si=-PzGH0vag0_SJ7Hw"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DNmXwtBXUPc?si=dFRCf9RwJpUu0cxI"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div class="sub-contents">
+        <h2 class="main-title">想定される使用方法</h2>
+        <div class="box-container">
+          <div class="box-content">
+            <img src="image/know.jpg" alt="知ってもらう人の画像" class="sample-image">
+            <div>知ってもらう</div>
+          </div>
+          <div class="triangle"></div>
+          <div class="box-content">
+            <img src="image/VR.jpg" alt="" class="sample-image">
+            <div>体験してもらう</div>
+          </div>
+          <div class="triangle"></div>
+          <div class="box-content">
+            <img src="image/coupon.png" alt="" class="sample-image">
+            <div>クーポンを配布する</div>
+          </div>
+          <div class="triangle"></div>
+          <div class="box-content">
+            <img src="image/visitor.jpg" alt="" class="sample-image">
+            <div>実際に来てもらう</div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+    <footer class="footer">
+      <div class="md-flex md-justify-between">
+        <a href="https://jajaaan.co.jp/" class="footer__logo">
+          <img src="image/logo.png" width="140" alt="Logo" />
+        </a>
+        <ul class="footer__navi flex">
+          <li><a href="#">About</a></li>
+          <li><a href="#">サイトマップ</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+      <hr />
+      <p class="copyright">
+        © 2024 GoodDot株式会社 POINT CLOUD DATA SERVICE
+      </p>
+    </footer>
+    <script src="JS/app.js"></script>
   </body>
+
 </html>
