@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="CSS/main.css" />
     <title>GoodDot株式会社</title>
   </head>
@@ -14,7 +15,7 @@
       <div class="hero-video">
         <video autoplay muted playsinline loop src="image/HpBackgroundMovie.webm"></video>
       </div>
-      <h1 class="fadein">点群データの「VR観光」</h1>
+      <h1 data-aos="fade-in" data-aos-duration="1500" data-aos-anchor-placement="bottom-bottom" >点群データの「VR観光」</h1>
       <div id="js-scroll-top" class="scroll-top is-hide">
         Top
       </div>
@@ -69,28 +70,31 @@
       <div class="sub-contents">
         <h2 class="main-title">想定される使用方法</h2>
         <div class="box-container">
-          <div class="box-content">
+          <div class="box-content" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <img src="image/know.jpg" alt="知ってもらう人の画像" class="sample-image">
             <div>知ってもらう</div>
           </div>
           <div class="triangle"></div>
-          <div class="box-content">
+          <div class="box-content" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="200">
             <img src="image/VR.jpg" alt="" class="sample-image">
             <div>体験してもらう</div>
           </div>
           <div class="triangle"></div>
-          <div class="box-content">
+          <div class="box-content" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="400">
             <img src="image/coupon.png" alt="" class="sample-image">
             <div>クーポンを配布する</div>
           </div>
           <div class="triangle"></div>
-          <div class="box-content">
+          <div class="box-content" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-delay="600">
             <img src="image/visitor.jpg" alt="" class="sample-image">
             <div>実際に来てもらう</div>
           </div>
         </div>
       </div>
 
+      <div class="service">
+        <div class="container"></div>
+      </div>
 
 
     </main>
@@ -110,7 +114,13 @@
         © 2024 GoodDot株式会社 POINT CLOUD DATA SERVICE
       </p>
     </footer>
-    <script src="JS/app.js"></script>
+    <!-- <script src="JS/app.js"></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 
 </html>
+
+
