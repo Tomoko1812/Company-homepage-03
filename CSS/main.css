@@ -12,6 +12,8 @@
   --title-size: 28px;
   --main-title-size: 36px;
   --fade-in-title-size: 96px;
+
+  --vw: 1vw;
 }
 
 
@@ -19,15 +21,29 @@
   outline: 2px red solid;
 } */
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-flow: column;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
   color: var(--phonto-black-color);
+  width: calc(var(--vw) * 100);
 }
 
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
 
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                                         header
@@ -263,50 +279,54 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 24px;
+  text-align: center;
+  padding-bottom: 64px;
   width: 100%;
   background-color: var(--contrast-color);
   color: var(--phonto-white-color);
 }
 
-.about {
-  display: flex;
-  justify-content: center;
-}
 
-.about-content {
-  padding: 16px;
-  width: 40%
-}
 
-.about-image {
-  display: flex;
-  justify-content: center;
-  width: 45%;
-}
-
-.about-image img {
-  width: 45%;
-  margin: 8px;
+.circle-image {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 32px;
 }
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                 youtube-contents
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*/
 
-
+.main-title{
+  margin: 64px 0 32px ;
+}
 
 .youtube-contents {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   width: 100%;
+  margin-bottom: 64px;
 }
 
 .youtube-contents iframe {
-  margin: 40px;
-  margin-top: 0px;
+  width: 40%;
+  height: 40%;
+  aspect-ratio: 16 / 9;
+  margin: 0 8px;
 }
+
+@media screen and (max-width: 767px) {
+  .youtube-contents iframe{
+    width: 100%;
+    height: 100%;
+    margin: 8px 0;
+  }
+}
+
 
 
 .sub-contents {
@@ -314,25 +334,33 @@ p {
   height: auto;
   background-color: var(--main-color);
   text-align: center;
+  padding: 8px;
+}
+
+.sub-contents .main-title{
+  margin-top: 32px;
 }
 
 .box-container {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .box-content {
-  width: 250px;
-  height: 250px;
+  width: 16%;
+  aspect-ratio: 1;
   background-color: var(--base-color);
-  margin: 20px;
-  border-radius: 5%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sample-image {
-  height: 50%;
-  width: 50%;
-  margin: 10%;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .triangle {
@@ -346,28 +374,18 @@ p {
   margin-top: 125px;
 }
 
+@media screen and (max-width:767px) {
+  .box-container{
+    flex-direction: column;
+    align-items: center;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(to right, #e60000, #f39800, #fff100, #009944, #0068b7, #1d2088, #920783, #e60000) 0 / 200%;
-  height: 80px;
+  .triangle{
+    border-top: 45px solid #ffffff;
+    border-bottom: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
 }
 
 
@@ -377,7 +395,26 @@ p {
 
 
 
-  /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                                         footer
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*/
 
