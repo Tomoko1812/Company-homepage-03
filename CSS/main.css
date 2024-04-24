@@ -68,6 +68,8 @@ header {
   position: absolute;
   top: 0;
   right: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
@@ -79,36 +81,6 @@ header {
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                 fadeIn
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*/
-/* .fadein {
-  font-size: 120px;
-  color: var(--phonto-white-color);
-  display: inline-block;
-  background: linear-gradient(0deg, #888888 20%, #ffffff 89%);
-  background: -webkit-linear-gradient(90deg, #888888 20%, #ffffff 89%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
-/* -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--base-color); */
-/* position: absolute;
-  top: 550px;
-  left: 32px;
-  display: block;
-  animation-name: fadeInAnime;
-  animation-duration: 4.0s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInAnime {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-} */
-
 header h1 {
   position: absolute;
   bottom: 0;
@@ -122,7 +94,6 @@ header h1 {
   background: linear-gradient(0deg, #000000, #777777, #dddddd);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -212,39 +183,6 @@ nav ul li a:hover {
   color: #ffffff;
 }
 
-/* "shift"クラスが適用されたナビゲーションバーのリンクのホバーエフェクトのスタイル。 */
-/* nav.shift ul li a {
-  position: relative;
-  z-index: 1;
-}
-
-nav.shift ul li a:hover {
-  color: #91640F;
-}
-
-nav.shift ul li a:after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  width: 100%;
-  height: 1px;
-  content: '.';
-  color: transparent;
-  background: #F1C40F;
-  visibility: none;
-  opacity: 0;
-  z-index: -1;
-}
-
-nav.shift ul li a:hover:after {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
-} */
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                                         main
@@ -270,6 +208,7 @@ p {
   font-size: var(--important-size);
   padding: 4px;
   margin-top: 8px;
+  letter-spacing: 0.1em;
 }
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -348,13 +287,21 @@ p {
 }
 
 .box-content {
-  width: 16%;
+  width: 15vmax;
+  height: 15vmax;
   aspect-ratio: 1;
   background-color: var(--base-color);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width:767px){
+  .box-content{
+    width: 25vmax;
+    height: 25vmax;
+  }
 }
 
 .sample-image {
