@@ -19,29 +19,33 @@
       <div id="js-scroll-top" class="scroll-top is-hide">
         Top
       </div>
-      <nav>
-        <a href="index.html"><img src="image/logo.png" alt="company-logo" id="logo"></a>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="HTML/concept.html">Concept</a></li>
-          <li><a href="HTML/news.html">News</a></li>
-          <li><a href="HTML/service.html">Service</a></li>
-          <li><a href="HTML/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navburger">
+        <div class="logotype"><img src="image/logo.svg" alt="company logo" width="100"></div>
+        <nav>
+          <input id="menu__toggle" type="checkbox">
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <ul class="menu__box">
+            <li><a class="menu__item" href="index.html"><span class="red">Home</span></a></li>
+            <li><a class="menu__item" href="HTML/concept.html">Concept</a></li>
+            <li><a class="menu__item" href="HTML/news.html">News</a></li>
+            <li><a class="menu__item" href="HTML/service.html">Service</a></li>
+            <li><a class="menu__item" href="HTML/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
 
       <div class="greeting">
-        <h2 class="main-title">私たちについて</h2>
-        <div class="circle-image"><img src="image/president.jpg" alt="president picture"></div>
+        <div class="circle-image"><img src="image/president_edge.svg" alt=president picture></div>
         <h3>わたしたちGoodDot株式会社です。</h3>
-        <p>皆様、当サイトへようこそ。私たちは、皆様が日々の生活に役立つ情報やヒントを提供することを目指しています。<br>
-          ここでは、最新のニュース、便利なライフハック、深い知識に基づいた記事を幅広く取り揃えております。<br>
-          皆様が新しい発見をし、日常生活で役立つ知識を得られるよう、心を込めて情報をお届けします。<br>
-          どうぞごゆっくりと、当サイトをお楽しみください。<br>
-          何かご不明な点がございましたら、遠慮なくお問い合わせください。</p>
+        <p>私たちは点群(ポイントクラウド)の未知なる可能性を信じています．<br>
+          最近は点群(ポイントクラウド)が様々な場面で活用されるようになってきました．<br>
+          そこで私たちは点群を用い，町の特色に合わせたデジタル情報資源の作成を行っています．<br>
+        </p>
       </div>
 
       <h2 class="main-title">
@@ -49,13 +53,13 @@
       </h2>
 
       <div class="youtube-contents">
-        <iframe src="https://www.youtube.com/embed/zq6mps_eTDM?si=UJF6OUG78xrPQ-Np"
-          title="YouTube video player" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/zq6mps_eTDM?si=UJF6OUG78xrPQ-Np" title="YouTube video player"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-        <iframe src="https://www.youtube.com/embed/DNmXwtBXUPc?si=dFRCf9RwJpUu0cxI"
-          title="YouTube video player" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/DNmXwtBXUPc?si=dFRCf9RwJpUu0cxI" title="YouTube video player"
+          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
@@ -86,7 +90,28 @@
       </div>
 
       <div class="service">
-        <div class="container"></div>
+        <h2>サービスについて</h2>
+        <div class="container">
+          <div class="interest">
+            <div class="want">
+              <p>まちに関心を持ってもらい，ふるさと納税額や観光入込客数を増やしたい</p>
+              <img src="image/film-slate.png" alt="film">
+            </div>
+            <div class="triangle"></div>
+            <p>町の魅力を点群で撮影，没入感抜群のVR動画を作成<br>
+                作成後も，<strong>心を惹きつけるPR</strong>を実装までサポート</p>
+          </div>
+          <div class="saving">
+            <div class="want">
+              <p>貴重な建物だからこそ，耐震補強が必要でも維持が難しくても構成に残したい</p>
+              <img src="image/chinese.png" alt="temple">
+            </div>
+              <div class="triangle"></div>
+              <p>建物を細部まで点群データ化，3Dデータとして保管<br>
+                  <strong>解体する建物の保存</strong>だけでなく，災害に備えた<strong>修復用データ</strong>にも</p>
+            </div>
+          
+        </div>
       </div>
 
 
