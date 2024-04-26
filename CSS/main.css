@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   /*""color""*/
   --base-color: #ffffff;
@@ -25,7 +26,7 @@
 body {
   display: flex;
   flex-flow: column;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans", Meiryo, sans-serif;
+  font-family: "Meiryo UI", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
   color: var(--phonto-black-color);
   width: calc(var(--vw) * 100);
 }
@@ -39,6 +40,10 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+}
+
+span {
+  display: inline-block;
 }
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,13 +84,14 @@ header h1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: 10vh;
+  font-size: 8vw;
+  white-space: nowrap;
   z-index: 1;
   color: var(--phonto-white-color);
   padding-left: 20px;
   padding-bottom: 20px;
   display: inline-block;
-  background: linear-gradient(0deg, #000000, #777777, #dddddd);
+  background: linear-gradient(0deg, #000000, #777777, #bbbbbb);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -94,6 +100,7 @@ header h1 {
   header h1 {
     writing-mode: vertical-rl;
     text-orientation: upright;
+    font-size: 7vh;
   }
 }
 
@@ -269,7 +276,7 @@ nav {
   top: 8px;
   transition-duration: 0.25s;
 }
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 48.01em) {
   .menu__btn {
     display: none;
   }
@@ -433,7 +440,7 @@ p {
 
 .container {
   display: flex;
-  width: 80%;
+  width: 85%;
 }
 @media screen and (max-width: 800px) {
   .container {
@@ -441,8 +448,8 @@ p {
   }
 }
 .container .triangle {
-  background: var(--main-color);
-  margin: 0 auto;
+  background: #33cccc;
+  margin: 24px auto;
   height: 51.9615242271px;
   width: 60px;
   -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
@@ -451,6 +458,7 @@ p {
 .container p {
   text-align: center;
   font-size: 24px;
+  padding: 0;
 }
 
 .want {
@@ -459,7 +467,7 @@ p {
   justify-content: center;
   border: double 5px #33cccc;
   padding: 16px;
-  margin: 8px;
+  margin: 36px 8px 0;
 }
 @media screen and (max-width: 470px) {
   .want {
