@@ -79,7 +79,7 @@ header h1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: var(--fade-in-title-size);
+  font-size: 10vh;
   z-index: 1;
   color: var(--phonto-white-color);
   padding-left: 20px;
@@ -89,6 +89,12 @@ header h1 {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 1130px) {
+  header h1 {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 }
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -468,6 +474,10 @@ p {
 .want img {
   display: block;
   width: 100px;
+}
+
+.explanation {
+  padding: 32px;
 }
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

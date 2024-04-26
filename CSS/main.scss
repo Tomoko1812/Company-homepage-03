@@ -83,7 +83,7 @@ header h1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  font-size: var(--fade-in-title-size);
+  font-size: 10vh;
   z-index: 1;
   color: var(--phonto-white-color);
   padding-left: 20px;
@@ -92,8 +92,13 @@ header h1 {
   background: linear-gradient(0deg, #000000, #777777, #dddddd);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
 
+  @media screen and (max-width:1130px) {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+}
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                 top-bar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*/
@@ -478,6 +483,10 @@ p {
     display: block;
     width: 100px;
   }
+}
+
+.explanation{
+  padding: 32px;
 }
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
