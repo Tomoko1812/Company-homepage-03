@@ -13,24 +13,26 @@
 
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="../index.html"><img src="../image/logo.png" alt="company-logo" id="logo"></a></li>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="concept.html">Concept</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="navburger">
+                <a href="../index.html">
+                    <div class="logotype">GoodDot</div>
+                </a>
+                <nav>
+                    <input id="menu__toggle" type="checkbox">
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li><a class="menu__item" href="../index.html">Home</a></li>
+                        <li><a class="menu__item" href="../HTML/concept.html"><span class="red">Concept</span></a></li>
+                        <li><a class="menu__item" href="../HTML/news.html">News</a></li>
+                        <li><a class="menu__item" href="../HTML/service.html">Service</a></li>
+                        <li><a class="menu__item" href="../HTML/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <div class="font-inter">
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>ご連絡フォーム</h1>
-                    <p>VR観光サービスに関するご質問にお答えします.ご遠慮なくお問い合わせ下さい.</p>
-                </div>
-            </div>
             <div class="form-section">
                 <form id="contactForm">
                     <input name="name" type="text" placeholder="名前" required>

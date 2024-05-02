@@ -10,6 +10,14 @@ a {
   transition: 0.3s;
 }
 
+@mixin burgerSpan {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+}
+
 .navburger {
   display: flex;
   justify-content: space-between;
@@ -31,10 +39,11 @@ a {
 nav {
   display: flex;
   align-items: center;
-}
-@media screen and (max-width: 48em) {
-  nav nav {
-    display: inline;
+
+  @media screen and (max-width: 48em) {
+    nav {
+      display: inline;
+    }
   }
 }
 
@@ -42,9 +51,8 @@ nav {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-}
-@media screen and (max-width: 48em) {
-  .menu__box {
+
+  @media screen and (max-width: 48em) {
     flex-direction: column;
     position: fixed;
     visibility: hidden;
@@ -76,40 +84,44 @@ nav {
   font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
-}
-@media screen and (max-width: 48em) {
-  .menu__item {
+
+  @media screen and (max-width: 48em) {
     display: block;
     padding: 12px 24px;
     color: #ffffff;
     font-size: 18px;
     transition-duration: 0.5s;
-  }
-  .menu__item:hover {
-    background-color: #4f5464;
+
+    &:hover {
+      background-color: #4f5464;
+    }
   }
 }
 
 #menu__toggle {
   opacity: 0;
-}
-#menu__toggle:checked ~ .menu__btn > span {
-  transform: rotate(45deg);
-}
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
-  background: #f06c64;
-}
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-  background: #f06c64;
-}
-#menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  left: 0;
-  margin: 0;
+
+  &:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+
+  &:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    background: #f06c64;
+  }
+
+  &:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background: #f06c64;
+  }
+
+  &:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+    margin: 0;
+  }
 }
 
 .menu__btn {
@@ -123,36 +135,26 @@ nav {
   height: 26px;
   cursor: pointer;
   z-index: 2;
-}
-.menu__btn span {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-}
-.menu__btn span::before {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  content: "";
-  top: -8px;
-  transition-duration: 0.25s;
-}
-.menu__btn span::after {
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #ffffff;
-  content: "";
-  top: 8px;
-  transition-duration: 0.25s;
-}
-@media screen and (min-width: 48.01em) {
-  .menu__btn {
+
+  span {
+    @include burgerSpan;
+
+    &::before {
+      @include burgerSpan;
+      content: "";
+      top: -8px;
+      transition-duration: 0.25s;
+    }
+
+    &::after {
+      @include burgerSpan;
+      content: "";
+      top: 8px;
+      transition-duration: 0.25s;
+    }
+  }
+
+  @media screen and (min-width: 48.01em) {
     display: none;
   }
 }
@@ -160,6 +162,7 @@ nav {
 /*"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                           hero
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*/
+
 .font-inter {
   font-family: "Inter", sans-serif;
 }
@@ -189,8 +192,7 @@ h1 {
   background: linear-gradient(45deg, #fa8bff 16%, #2bd2ff 57%, #2bff88 90%);
   background: -webkit-linear-gradient(45deg, #fa8bff 16%, #2bd2ff 57%, #2bff88 90%);
   background-size: 300% auto;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientEffect 2.5s infinite alternate;
 }
@@ -199,10 +201,12 @@ h1 {
   from {
     background-position: left;
   }
+
   to {
     background-position: right;
   }
 }
+
 button {
   padding: 0.75rem 1.5rem;
   /* 12px 24px */
@@ -250,11 +254,13 @@ footer {
     font-size: 1.75rem;
     /* Adjusting for smaller screens */
   }
+
   .vr-tourism-section h2 {
     font-size: 1.25rem;
   }
+
   .vr-tourism-section,
   footer {
     padding: 1.25rem;
   }
-}/*# sourceMappingURL=concept.css.map */
+}
