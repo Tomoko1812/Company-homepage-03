@@ -494,8 +494,9 @@ p {
 .footer {
   padding: 2rem;
   font-size: var(--normal-size);
-  color: #999;
-  background: #fff;
+  color: #dbdada;
+  background: #2D303A;
+  margin-top: 16px;
 }
 
 .footer ul {

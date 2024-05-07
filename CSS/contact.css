@@ -156,13 +156,17 @@ nav {
   }
 }
 
+/**********************************************************************
+                            form
+**********************************************************************/
 .Form {
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720px;
+  max-width: 800px;
+  padding: 0 16px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 579px) {
   .Form {
     margin-top: 40px;
   }
@@ -176,10 +180,8 @@ nav {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 579px) {
   .Form-Item {
-    padding-left: 14px;
-    padding-right: 14px;
     padding-top: 16px;
     padding-bottom: 16px;
     flex-wrap: wrap;
@@ -197,7 +199,7 @@ nav {
   font-weight: bold;
   font-size: 18px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 579px) {
   .Form-Item-Label {
     max-width: inherit;
     display: flex;
@@ -210,7 +212,7 @@ nav {
   margin-top: 8px;
   margin-bottom: auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 579px) {
   .Form-Item-Label.isMsg {
     margin-top: 0;
   }
@@ -224,11 +226,11 @@ nav {
   width: 48px;
   display: inline-block;
   text-align: center;
-  background: #5bc8ac;
+  background: #50ceae;
   color: #fff;
   font-size: 14px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 579px) {
   .Form-Item-Label-Required {
     border-radius: 4px;
     padding-top: 4px;
@@ -247,11 +249,11 @@ nav {
   height: 48px;
   flex: 1;
   width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
+  max-width: 600px;
+  background: rgba(234, 237, 242, 0.8470588235);
   font-size: 18px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 579px) {
   .Form-Item-Input {
     margin-left: 0;
     margin-top: 18px;
@@ -270,11 +272,11 @@ nav {
   height: 216px;
   flex: 1;
   width: 100%;
-  max-width: 410px;
-  background: #eaedf2;
+  max-width: 800px;
+  background: rgba(234, 237, 242, 0.8470588235);
   font-size: 18px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 579px) {
   .Form-Item-Textarea {
     margin-top: 18px;
     margin-left: 0;
@@ -284,27 +286,31 @@ nav {
   }
 }
 
-.Form-Btn {
-  border-radius: 6px;
-  margin-top: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 280px;
-  display: block;
-  letter-spacing: 0.05em;
-  background: #5bc8ac;
-  color: #fff;
+.btn-slip {
+  display: inline-block;
+  padding: 12px 24px;
   font-weight: bold;
-  font-size: 20px;
+  border-radius: 4px;
+  background-color: #50ceae;
+  box-shadow: 0px 2px 2px 1px rgba(234, 237, 242, 0.8470588235);
+  border-bottom: solid 5px #40a58c;
+  text-decoration: none;
+  color: #fff;
 }
-@media screen and (max-width: 480px) {
-  .Form-Btn {
-    margin-top: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 160px;
-    font-size: 16px;
-  }
+
+.btn-slip:active {
+  box-shadow: none;
+  position: relative;
+  border-bottom: none;
+  top: 7px;
+}
+
+.send {
+  text-align: center;
+  margin: 8px;
+}
+
+header {
+  width: 100%;
+  height: 100px;
 }/*# sourceMappingURL=contact.css.map */

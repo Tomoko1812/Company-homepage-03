@@ -162,25 +162,22 @@ nav {
   }
 }
 
+/**********************************************************************
+                            form
+**********************************************************************/
 
-
-
-
-
-
-
-
-
-$primary-color: #5bc8ac;
-$secondary-color: #eaedf2;
+$primary-color: #50ceae;
+$primary-shadow-color: #40a58c;
+$secondary-color: #eaedf2d8;
 $border-color: #ddd;
-$media-query-breakpoint: 480px;
+$media-query-breakpoint: 579px;
 
 .Form {
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720px;
+  max-width: 800px;
+  padding: 0 16px;
 
   @media screen and (max-width: $media-query-breakpoint) {
     margin-top: 40px;
@@ -196,8 +193,8 @@ $media-query-breakpoint: 480px;
   align-items: center;
 
   @media screen and (max-width: $media-query-breakpoint) {
-    padding-left: 14px;
-    padding-right: 14px;
+    // padding-left: 14px;
+    // padding-right: 14px;
     padding-top: 16px;
     padding-bottom: 16px;
     flex-wrap: wrap;
@@ -262,7 +259,7 @@ $media-query-breakpoint: 480px;
   height: 48px;
   flex: 1;
   width: 100%;
-  max-width: 410px;
+  max-width: 600px;
   background: $secondary-color;
   font-size: 18px;
 
@@ -284,7 +281,7 @@ $media-query-breakpoint: 480px;
   height: 216px;
   flex: 1;
   width: 100%;
-  max-width: 410px;
+  max-width: 800px;
   background: $secondary-color;
   font-size: 18px;
 
@@ -297,26 +294,31 @@ $media-query-breakpoint: 480px;
   }
 }
 
-.Form-Btn {
-  border-radius: 6px;
-  margin-top: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 280px;
-  display: block;
-  letter-spacing: 0.05em;
-  background: $primary-color;
-  color: #fff;
+.btn-slip {
+  display: inline-block;
+  padding: 12px 24px;
   font-weight: bold;
-  font-size: 20px;
+  border-radius: 4px;
+  background-color: $primary-color;
+  box-shadow: 0px 2px 2px 1px $secondary-color;
+  border-bottom: solid 5px $primary-shadow-color;
+  text-decoration: none;
+  color: #fff;
+}
 
-  @media screen and (max-width: $media-query-breakpoint) {
-    margin-top: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 160px;
-    font-size: 16px;
-  }
+.btn-slip:active {
+  box-shadow: none;
+  position: relative;
+  border-bottom: none;
+  top: 7px;
+}
+
+.send {
+  text-align: center;
+  margin: 8px;
+}
+
+header {
+  width: 100%;
+  height: 100px;
 }
