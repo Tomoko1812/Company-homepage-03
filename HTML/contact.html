@@ -7,8 +7,6 @@
         <title>Contact Us</title>
         <link rel="stylesheet" href="../CSS/reset.css" />
         <link rel="stylesheet" href="../CSS/contact.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -24,44 +22,42 @@
                     </label>
                     <ul class="menu__box">
                         <li><a class="menu__item" href="../index.html">Home</a></li>
-                        <li><a class="menu__item" href="../HTML/concept.html"><span class="red">Concept</span></a></li>
+                        <li><a class="menu__item" href="../HTML/concept.html">Concept</a></li>
                         <li><a class="menu__item" href="../HTML/news.html">News</a></li>
                         <li><a class="menu__item" href="../HTML/service.html">Service</a></li>
-                        <li><a class="menu__item" href="../HTML/contact.html">Contact</a></li>
+                        <li><a class="menu__item" href="../HTML/contact.html"><span class="red">Contact</span></a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <div class="font-inter">
-            <div class="form-section">
-                <form id="contactForm">
-                    <input name="name" type="text" placeholder="名前" required>
-                    <input name="email" type="email" placeholder="メールアドレス" required>
-                    <input name="phone" type="tel" placeholder="電話番号（オプション）">
-                    <input name="subject" type="text" placeholder="お問い合わせ内容" required>
-                    <textarea name="message" rows="4" placeholder="詳細" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-                <div>
-                    <p>Email: gooddot20200901@gmail.com</p>
-                    <p>telephone number: 0948 52 3577</p>
-                    <p>Address: 福岡県飯塚市太郎丸560-1</p>
+        <main>
+            <div class="Form">
+                <div class="Form-Item">
+                    <p class="Form-Item-Label">
+                        <span class="Form-Item-Label-Required">必須</span>会社名
+                    </p>
+                    <input type="text" class="Form-Item-Input" placeholder="例）株式会社令和">
                 </div>
-                <div class="social-links">
-                    <a href="https://facebook.com" class="facebook"><i class="fa fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="https://linkedin.com" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://instagram.com" class="instagram"><i class="fa fa-instagram"></i></a>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+                    <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
                 </div>
-                <!-- <button class="live-chat">Live Chat</button> -->
-                <a href="/faq" class="faq-link">よくある質問</a>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+                    <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
+                </div>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+                    <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+                </div>
+                <div class="Form-Item">
+                    <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+                    <textarea class="Form-Item-Textarea"></textarea>
+                </div>
+                <input type="submit" class="Form-Btn" value="送信する">
             </div>
-            <footer>
-                <p>GoodDot株式会社</p>
-                <p>詳細はご連絡下さい gooddot20200901@gmail.com</p>
-            </footer>
-        </div>
-        <script src="../JS/contact.js"></script>
+        </main>
+
     </body>
 
 </html>
