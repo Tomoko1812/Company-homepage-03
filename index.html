@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GoodDot株式会社</title>
     <link rel="stylesheet" href="CSS/reset.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="CSS/main.css" />
-    
+
     <!-- ページの説明 -->
     <meta name="description" content="GoodDot株式会社は、革新的なテクノロジーとサービスでビジネスの未来を創造します。">
 
@@ -37,9 +37,9 @@
         <video autoplay muted playsinline loop src="image/HpBackgroundMovie.webm"></video>
       </div>
       <h1 data-aos="fade-in" data-aos-offset="100" data-aos-duration="1500">点群データの「VR観光」</h1>
-      <div id="js-scroll-top" class="scroll-top is-hide">
+      <!-- <div id="js-scroll-top" class="scroll-top is-hide">
         Top
-      </div>
+      </div> -->
 
       <div class="navburger">
         <a href="index.html">
@@ -145,27 +145,37 @@
 
         </div>
       </div>
-
-
     </main>
+
     <footer class="footer">
       <div class="md-flex md-justify-between">
-        <a href="https://jajaaan.co.jp/" class="footer__logo">
-          <img src="image/logo.png" width="140" alt="Logo" />
+        <a href="../index.html">
+          <div class="logotype">GoodDot</div>
         </a>
         <ul class="footer__navi flex">
-          <li><a href="#">About</a></li>
-          <li><a href="#">サイトマップ</a></li>
-          <li><a href="#">プライバシーポリシー</a></li>
+          <li class="icon"><a href="https://www.facebook.com/profile.php?id=61558267605071&locale=ja_JP"
+              target="_blank"><img src="image/Facebook_Logo_Secondary.png" alt="Facebook logo"></a></li>
+          <li class="icon"><a href="https://www.instagram.com/good_dot_point_cloud/" target="_blank"><img
+                src="image/Instagram_Glyph_White.png" alt="Instagram logo"></a></li>
+          <li class="icon"><a href="https://twitter.com/dot_good" target="_blank"><img src="image/x_logo-white.png"
+                alt="X logo"></a>
+          </li>
+          <li class="icon"><a href="http://www.youtube.com/@GoodDot." target="_blank"><img
+                src="image/yt_icon_mono_dark.png" alt="Youtube logo"></a></li>
         </ul>
       </div>
       <hr />
-      <p class="copyright">
-        © 2024 GoodDot株式会社 POINT CLOUD DATA SERVICE
-      </p>
+      <ul class="link-flex">
+        <li class="copyright">
+          © 2024 GoodDot株式会社 POINT CLOUD DATA SERVICE
+        </li>
+        <li class="link-tab"><a href="#">About</a></li>
+        <li class="link-tab"><a href="#">サイトマップ</a></li>
+        <li class="link-tab"><a href="HTML/privacy.html" target="_blank">プライバシーポリシー</a></li>
+      </ul>
     </footer>
     <script src="JS/app.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>

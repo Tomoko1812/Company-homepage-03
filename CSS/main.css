@@ -13,12 +13,9 @@
   --title-size: 28px;
   --main-title-size: 36px;
   --fade-in-title-size: 96px;
-  --vw: 1vw;
+  --viewWidth: 100vw;
 }
 
-/* *{
-  outline: 2px red solid;
-} */
 * {
   box-sizing: border-box;
 }
@@ -28,7 +25,7 @@ body {
   flex-flow: column;
   font-family: "Meiryo UI", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
   color: var(--phonto-black-color);
-  width: calc(var(--vw) * 100);
+  width: var(--viewWidth);
 }
 
 a {
@@ -330,6 +327,12 @@ p {
   margin-top: 32px;
   margin-bottom: 32px;
 }
+@media screen and (max-width: 301px) {
+  .circle-image {
+    width: 200px;
+    height: 200px;
+  }
+}
 
 /*""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
                                 youtube-contents
@@ -495,7 +498,7 @@ p {
   padding: 2rem;
   font-size: var(--normal-size);
   color: #dbdada;
-  background: #2D303A;
+  background: #2d303a;
   margin-top: 16px;
 }
 
@@ -511,7 +514,7 @@ p {
 }
 
 .footer a:hover {
-  color: var(--phonto-black-color);
+  color: white;
 }
 
 .flex {
@@ -550,6 +553,35 @@ p {
     justify-content: space-between;
   }
   .copyright {
-    text-align: left;
+    display: inline-block;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 801px) {
+  .copyright {
+    margin: 100px;
+  }
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.link-flex {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 801px) {
+  .link-flex {
+    flex-direction: column;
+  }
+}
+
+.link-tab {
+  margin-left: 12px;
+}
+@media screen and (max-width: 801px) {
+  .link-tab {
+    margin-top: 8px;
   }
 }/*# sourceMappingURL=main.css.map */
