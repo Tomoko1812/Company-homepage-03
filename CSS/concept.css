@@ -211,7 +211,7 @@ nav {
 
 .hero-section {
   width: 100%;
-  height: 500px;
+  height: 300px;
   background-image: url("/path/to/hero-image.jpg");
   background-size: cover;
   background-position: center;
@@ -264,6 +264,40 @@ button:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(0, 173, 187, 0.5);
   /* Adding focus outline for accessibility */
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 720deg);
+  }
+}
+.cat-picture {
+  width: 400px;
+  height: 400px;
+  margin: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  background: url(../image/gratisography-witch-cat-800x525.jpg) center;
+  background-size: auto 100%;
+  box-shadow: -20px -10px 40px rgba(0, 0, 0, 0.75) inset;
+  animation: rotation 0.1s linear infinite;
+}
+.cat-picture::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin: auto;
+  width: 90px;
+  height: 4px;
+  border-radius: 50%;
+  background: #000;
+  filter: blur(4px);
 }
 
 .vr-tourism-section {
