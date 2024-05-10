@@ -368,16 +368,20 @@ p {
   }
 }
 
+/*************************************************************************
+                            sub-contents
+*************************************************************************/
+
 .sub-contents {
   width: 100%;
   height: auto;
   background-color: var(--main-color);
   text-align: center;
-  padding: 16px 0;
+  padding: 64px 0;
 }
 
 .sub-contents .main-title {
-  margin-top: 32px;
+  margin-top: 0px;
 }
 
 .box-container {
